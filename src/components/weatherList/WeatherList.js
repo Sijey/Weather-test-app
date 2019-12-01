@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {loadWeather} from '../../actions/weather';
-import {Message, Divider, Button, Loader, Card} from 'semantic-ui-react';
+import {Message, Divider, Button, Loader} from 'semantic-ui-react';
 import CardItem from '../card/Card';
 import './WeatherList.css';
 
