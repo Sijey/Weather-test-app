@@ -26,6 +26,7 @@ const WeatherList = ({weather, forecast, error, load}) => {
 
     return (
         <div>
+          <h1>Weather in Kharkiv</h1>
           <div className='weather' ><CardItem day={weather} /></div>
           <div className='forecast'>{forecastCard()}</div>
         </div>
