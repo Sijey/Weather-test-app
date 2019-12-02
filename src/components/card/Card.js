@@ -5,12 +5,12 @@ import './Card.css';
 const CardItem = ({day}) => {
 
   const ms = day.dt * 1000;
-  const dayName = new Date(ms).toLocaleDateString('ru', {weekday: 'long'});
+  const dayName = new Date(ms).toLocaleDateString('ru', {weekday: 'long', day: 'numeric', month: 'long'});
   const imgURL = "owf owf-" + day.weather[0].id + " owf-5x";
 
   return (
       <>
-        <Card className='card'>
+        <Card className='claim_card'>
           <Card.Content>
             <Card.Header>{dayName}</Card.Header>
             <i className={imgURL} />

@@ -29,7 +29,7 @@ export const loadWeather = () => {
     let success = false;
     Promise.all([loadData(weatherApiLink), loadData(forecastApiLink)])
         .then(([weather, forecast]) => {
-            const dailyData = forecast.list.filter(reading => reading.dt_txt.includes('12:00:00'));
+            const dailyData = forecast.list.filter(reading => reading.dt_txt.includes('06:00:00'));
             dispatch(handleWeatherWithForecast(weather, dailyData));
             success = true;
         })
