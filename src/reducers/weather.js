@@ -4,6 +4,7 @@ const initialState = {
   hasError: null,
   weather: null,
   forecast: [],
+  cityName: 'kharkiv',
 };
 
  export const reducer = (state = initialState, action) => {
@@ -18,6 +19,11 @@ const initialState = {
         ...state,
         weather: action.weather,
         forecast: action.forecast,
+      };
+    case WEATHER_ACTIONS.ADD_CITY:
+      return {
+        ...state,
+        cityName: action.city,
       };
     default:
       return state;

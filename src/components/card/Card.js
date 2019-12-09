@@ -9,16 +9,14 @@ const CardItem = ({day}) => {
   const imgURL = "owf owf-" + day.weather[0].id + " owf-5x";
 
   return (
-      <>
-        <Card className='claim_card'>
-          <Card.Content>
-            <Card.Header>{dayName}</Card.Header>
-            <i className={imgURL} />
-            <Card.Meta>{Math.round(day.main.temp)} °C</Card.Meta>
-            <Card.Description>{day.weather[0].description}</Card.Description>
-          </Card.Content>
-        </Card>
-      </>
+    <Card className='claim_card'>
+      <Card.Content>
+        <Card.Header>{dayName}</Card.Header>
+        <i className={imgURL}/>
+        <Card.Meta>{Math.round(day.main.temp)} °C</Card.Meta>
+        <Card.Description>{day.weather[0].description}</Card.Description>
+      </Card.Content>
+    </Card>
   )
 };
 
