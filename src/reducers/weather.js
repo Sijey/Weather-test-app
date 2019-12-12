@@ -19,6 +19,7 @@ const initialState = {
         ...state,
         weather: action.weather,
         forecast: action.forecast,
+        hasError: null
       };
     case WEATHER_ACTIONS.ADD_CITY:
       return {

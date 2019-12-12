@@ -26,8 +26,11 @@ export const handleWeatherWithForecast = (weather, forecast) => ({
   forecast,
 });
 
-export const loadWeather = (city) => {
-  return dispatch => {
+export const loadWeather = () => {
+  return (dispatch, getState) => {
+    const state = getState();
+    const getCity = state => state.cityName;
+    const city = getCity(state);
     Promise.all([loadData(`${API}weather?q=${city + linkProps + openWeatherApiKey}`),
                         loadData(`${API}forecast?q=${city + linkProps + openWeatherApiKey}`)])
         .then(([weather, forecast]) => {
