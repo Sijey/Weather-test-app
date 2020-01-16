@@ -1,5 +1,6 @@
 .ui.card.claim_card {
-  margin: 0;
+  margin: 5px;
+  width: 200px;
 }
 
 i {

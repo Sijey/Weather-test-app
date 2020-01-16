@@ -1,7 +1,7 @@
 .forecast {
   display: flex;
-  justify-content: center;
-  margin-top: 30px;
+  justify-content: space-around;
+  margin: 30px;
 }
 
 .ui.loader {
@@ -15,4 +15,12 @@
 
 .ui.loader.claim_loader {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 1050px) {
+  .forecast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

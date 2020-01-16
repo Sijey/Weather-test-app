@@ -7,7 +7,7 @@ const SearchBar = ({load, addCity}) => {
   return (
     <Form className='search_bar' onSubmit={load}>
       <Input type='text' onChange={event => addCity(event.target.value)} />
-      <Input type='submit' value='Get weather' />
+      <Input type='submit' value='Получить погоду' />
     </Form>
   );
 };
