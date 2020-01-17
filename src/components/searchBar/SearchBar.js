@@ -1,13 +1,15 @@
 import React from 'react';
-import {Form, Input} from "semantic-ui-react";
+import {Button, Form, Input} from "semantic-ui-react";
 import {connect} from "react-redux";
 import {addCity, loadWeather} from "../../actions/weather";
 
 const SearchBar = ({load, addCity}) => {
   return (
     <Form className='search_bar' onSubmit={load}>
-      <Input type='text' onChange={event => addCity(event.target.value)} />
-      <Input type='submit' value='Получить погоду' />
+      <Input>
+        <Input type='text' size='small' onChange={event => addCity(event.target.value)} />
+        <Button type='submit' size='small' color='green'>Получить погоду</Button>
+      </Input>
     </Form>
   );
 };
