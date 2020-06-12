@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {loadWeather} from '../../actions/weather';
-import {Message, Divider, Button, Loader} from 'semantic-ui-react';
+import {Message, Divider, Loader} from 'semantic-ui-react';
 import CardItem from '../card/Card';
 import './WeatherList.css';
 
@@ -16,7 +16,6 @@ const WeatherList = ({weather, forecast, error, load}) => {
       <Message negative>
         <Message.Header>{error}</Message.Header>
         <Divider />
-        <Button onClick={load}>Try again</Button>
       </Message>
     );
   } else if (weather && forecast) {

@@ -37,6 +37,6 @@ export const loadWeather = () => {
             const dailyData = forecast.list.filter(reading => reading.dt_txt.includes('06:00:00'));
             dispatch(handleWeatherWithForecast(weather, dailyData));
         })
-        .catch(() => dispatch(handleError('Loading failed')));
+        .catch(() => dispatch(handleError('Что-то пошло не так, попробуйте позже')));
   }
 };
